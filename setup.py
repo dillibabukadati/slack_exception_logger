@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='slack_exception_logger',
-    version='0.1',
+    version='0.2',
     author='Dilli Babu Kadati',
     author_email='dillibabukadati777@gmail.com',
     description='A Python library for logging exceptions to a Slack channel',
