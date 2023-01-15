@@ -12,7 +12,8 @@ pip install slack_exception_logger
 
 To use slack_exception_logger, you need to import the push_to_slack function from the library:
 ```
-from slack_exception_logger import push_to_slack
+from slack_exception_logger import SlackExceptionLogger
+slack_logger = SlackExceptionLogger()
 ```
 You can then call the push_to_slack function and pass the exception object as an argument whenever an exception occurs in your code:
 ```
@@ -20,7 +21,7 @@ try:
     # Your code that may throw an exception
     1/0
 except Exception as e:
-    push_to_slack(e)
+    slack_logger.push_to_slack(e)
 ```
 Before using the library, you need to set the following environment variables:
 ```
