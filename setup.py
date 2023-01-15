@@ -12,7 +12,7 @@ setup(
     description='A Python library for logging exceptions to a Slack channel',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/yourusername/slack_exception_logger',
+    url='https://github.com/dillibk777/slack_exception_logger',
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

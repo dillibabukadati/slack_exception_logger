@@ -2,7 +2,7 @@ Metadata-Version: 2.1
 Name: slack-exception-logger
 Version: 0.1
 Summary: A Python library for logging exceptions to a Slack channel
-Home-page: https://github.com/yourusername/slack_exception_logger
+Home-page: https://github.com/dillibk777/slack_exception_logger
 Author: Dilli Babu Kadati
 Author-email: dillibabukadati777@gmail.com
 License: UNKNOWN
