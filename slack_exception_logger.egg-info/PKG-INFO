@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: slack-exception-logger
+Version: 0.1
+Summary: A Python library for logging exceptions to a Slack channel
+Home-page: https://github.com/yourusername/slack_exception_logger
+Author: Dilli Babu Kadati
+Author-email: dillibabukadati777@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# slack_exception_logger
+
+A Python library that allows you to log exceptions to a Slack channel using the Slack Webhook API.
+## Installation
+
+You can install slack_exception_logger using pip:
+```
+pip install slack_exception_logger
+```
+## Usage
+
+To use slack_exception_logger, you need to import the push_to_slack function from the library:
+```
+from slack_exception_logger import push_to_slack
+```
+You can then call the push_to_slack function and pass the exception object as an argument whenever an exception occurs in your code:
+```
+try:
+    # Your code that may throw an exception
+    1/0
+except Exception as e:
+    push_to_slack(e)
+```
+Before using the library, you need to set the following environment variables:
+```
+SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/your-webhook-url'
+SLACK_CHANNEL = '#exceptions'
+```
+You can get the Webhook URL by creating an incoming webhook in your Slack workspace.
+## Note
+
+This library uses the traceback module to get the complete exception details, which includes the exception type, value, and the stack trace, and then sends the traceback information to the slack channel.
+It is also possible to filter out the sensitive information from the traceback before sending it to slack.
+## License
+
+This library is licensed under the MIT License.
+## Contribution
+
+We welcome contributions to this library. If you have an idea for a new feature or have found a bug, please open an issue on Github.
+
+## Buy me a Coffee
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/dillibabukadati)
+
+
+
