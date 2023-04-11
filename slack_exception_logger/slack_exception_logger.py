@@ -15,11 +15,15 @@ class SlackExceptionLogger:
         Logs the given exception to the configured slack channel
         :param exception: The exception to be logged
         """
-        tb_str = traceback.format_exception(etype=type(exception), value=exception, tb=exception.__traceback__)
-        tb_str = ''.join(tb_str)
+        text = ""
+        if isinstance(exception, Exception):
+            tb_str = traceback.format_exception(etype=type(exception), value=exception, tb=exception.__traceback__)
+            f'An exception occurred: {tb_str}'
+        else:
+            text = f'Info: {exception}'
         message = {
             'channel': self.channel,
-            'text': f'An exception occured: {tb_str}'
+            'text': text
         }
 
         try:
